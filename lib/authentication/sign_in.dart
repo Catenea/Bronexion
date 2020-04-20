@@ -49,7 +49,7 @@ class _Sign_InState extends State<Sign_In> {
                   SizedBox(height: 20.0),
                   TextFormField(
                     style: TextStyle(color: Colors.white),
-                    decoration: textInputDecor.copyWith(hintText: "Correo"),
+                    decoration: textInputDecor.copyWith(hintText: "Email"),
                     validator: (val) =>
                         val.isEmpty ? "ingrese un correo" : null,
                     onChanged: (val) {
@@ -62,7 +62,7 @@ class _Sign_InState extends State<Sign_In> {
                   TextFormField(
                     obscureText: true,
                     style: TextStyle(color: Colors.white),
-                    decoration: textInputDecor.copyWith(hintText: "Contraseña"),
+                    decoration: textInputDecor.copyWith(hintText: "Password"),
                     validator: (val) => val.length < 8
                         ? "La contraseña debe tener al menos 8 caracteres"
                         : null,
