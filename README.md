@@ -1,4 +1,4 @@
-# bronexion
+# Bronexion
 
 A simple chat and blog app. The blog functinality comes from Coding Cafe Fluter Blogg App series https://www.youtube.com/playlist?list=PLxefhmF0pcPlw2kf-3PAPruUjqDYEEsRb.
 
