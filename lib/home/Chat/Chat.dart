@@ -43,7 +43,7 @@ class _ChatState extends State<Chat> {
       children: <Widget>[
         Expanded(
           child: Padding(
-            padding: const EdgeInsets.fromLTRB(10.0, 5.0, 10.0, 0.0),
+            padding: const EdgeInsets.fromLTRB(10.0, 0.0, 10.0, 0.0),
             child: StreamBuilder<QuerySnapshot>(
               stream:
                   _firestore.collection("Messages").orderBy("Date").snapshots(),
@@ -52,7 +52,6 @@ class _ChatState extends State<Chat> {
                   return Center(child: CircularProgressIndicator());
 
                 List<DocumentSnapshot> docs = snapshot.data.documents;
-
                 List<Widget> messages = docs
                     .map((doc) => Message(
                           from: doc.data["From"],
@@ -63,8 +62,9 @@ class _ChatState extends State<Chat> {
 
                 return ListView(
                     controller: scrollController,
+                    reverse: true,
                     children: <Widget>[
-                      ...messages,
+                      ...messages.reversed,
                     ]);
               },
             ),

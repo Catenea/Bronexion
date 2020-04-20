@@ -18,14 +18,14 @@ class Message extends StatelessWidget {
             style: TextStyle(color: Colors.grey),
           ),
           Material(
-              color: me ? Color.fromARGB(255, 138, 130, 47) : Colors.grey[700],
+              color: me ? Color.fromARGB(255, 255, 232, 131) : Colors.grey[500],
               borderRadius: BorderRadius.circular(10.0),
               elevation: 0.0,
               child: Container(
                   padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
                   child: Text(
                     text,
-                    style: TextStyle(color: Colors.white),
+                    style: TextStyle(color: Colors.black),
                   )))
         ],
       ),
